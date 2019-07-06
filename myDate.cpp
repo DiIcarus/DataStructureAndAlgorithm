@@ -23,10 +23,10 @@ void printDate(Date d);
 void printTime(Time t);
 void insert(char * c);//
 
-int main(){
-	int i = 0;
-	Time t = insertTime();
-}
+//int main(){
+//	int i = 0;
+//	Time t = insertTime();
+//}
 Time initTime(){
 	Time temp;
 	temp.Hour[0] = '0';

@@ -33,7 +33,7 @@ MuonTra muonTra,temp;
 NodePtr newNode(void);
 LienKetKep nodePointer(LienKetKep lienKet,int viTri);
 int position(LienKetKep lienKet,NodePtr p);
-void initialize(LienKetKep lienKet);
+void initNote(LienKetKep &lienKet);
 int isEmpty(LienKetKep lienKet);
 void insertFirst(LienKetKep &lienKet,MuonTra nodeInfo);
 void insertLast(LienKetKep &lienKet,MuonTra nodeInfo);
@@ -78,12 +78,12 @@ int position(LienKetKep lienKet,NodePtr p){
 	if(q == NULL) return -1;
 	return vitri;
 }
-void initialize(LienKetKep lienKet){
+void initNote(LienKetKep &lienKet){
 	lienKet.first = NULL;
 	lienKet.last = NULL;
 }
 int isEmpty(LienKetKep lienKet){
-	return((lienKet.first&&lienKet.last )== NULL ? true:false);
+	return((lienKet.first== NULL&&lienKet.last== NULL) ? true:false);
 }
 void insertFirst(LienKetKep &lienKet,MuonTra nodeInfo){
 	NodePtr temp;
@@ -250,121 +250,121 @@ void clearList(LienKetKep &lienKet){
 //		sv.maso = atoi(maso);
 //	}
 //}
-int main(){
-	return 1;
-//	int vitri;
-//	char chucnang,c,maso[5],c_vitri[5];
-//	initialize(first);
-//	do{
-//		chucnang = menu();
-//		fflush(stdin);
-//		switch(chucnang){
-//			case '1':{
-//				create_list(first);
-//				break;
-//			}
-//			case '2':{
-//				printf("\nvi tri them(1,2,3, . . .):");
-//				gets(c_vitri);
-//				vitri=atoi(c_vitri);
-//				p = nodepointer(first,vitri-1);
-//				if(vitri<=0||p==NULL){
-//					printf("Vi tri khong hop le");
-//					getche();
-//				}else{
-//					printf("Ma so sinh vien: ");
-//					gets(maso);
-//					sv.maso = atoi(maso);
-//					printf("Ho sinh vien: ");
-//					gets(sv.ho);
-//					printf("Ten sinh vien: ");
-//					gets(sv.ten);
-//					if(vitri == 1) insert_first(first,sv);
-//					else insert_after(p,sv);
-//				}
-//				break;
-//			}
-//			case '3':{
-//				printf("Danh sach sinh vien: ");
-//				printf("\n STT MSSV		HOTEN");
-//				traverse(first);
-//				getche();
-//				break;
-//			}
-//			case '4':{
-//				printf("vi tri hieu chinh(1,2,...):");
-//				gets(c_vitri);
-//				vitri = atoi(c_vitri);
-//				p=nodepointer(first,vitri);
-//				if(p == NULL){
-//					printf("Vi tri khon phu hop");
-//					getche();
-//				}else{
-//					printf("\n STT:%d MSSV:%d HO:%s TEN:%s",vitri,p->info.maso,p->info.ho,p->info.ten);
-//					printf("\nMa sosv moi: ");
-//					gets(maso);
-//					sv.maso = atoi(maso);
-//					printf("Ho sv moi: ");
-//					gets(sv.ho);
-//					printf("ten sv moi: ");
-//					gets(sv.ten);
-//					p->info = sv;
-//				}
-//				break;
-//			}
-//			case '5':{
-//				printf("\nVi tri can xoa(1,2, ...)");
-//				gets(c_vitri);
-//				vitri = atoi(c_vitri);
-//				p = nodepointer(first,vitri-1);
-//				if(vitri <=0||p==NULL){
-//					printf("vi tri khong hop le");
-//					getche();
-//				}else{
-//					if(vitri ==1) delete_first(first);
-//					else delete_after(p);
-//				}
-//				break;
-//			}
-//			case '6':{
-//				cout<<"\n Ma so sinh vien can tim: ";
-//				gets(maso);
-//				sv.maso = atoi(maso);
-//				p=search_info(first,sv.maso);
-//				if(p ==NULL) printf("Khong co sinh vien co ma so %d trong danh sach",sv.maso);
-//				else{
-//					printf("Tim thay o vi tri %d trong danh sach",position(first,p));
-//					getche();
-//				}
-//				break;
-//			}
-//			case '7':{
-//				cout<<"ban cho chac khong ??";
-//				c = toupper(getche());
-//				if(c == 'C') selection(first);
-//				break;
-//			}
-//			case '8':{
-//				cout<<"Ban nho sap xep danh sach truowc. Nhan phim bat ky . .. ";
-//				getche();
-//				cout<<"ma so sinh vien: ";
-//				gets(maso);
-//				sv.maso = atoi(maso);
-//				cout<<"Ho sinh vien: ";
-//				gets(sv.ho);
-//				cout<<"ten sinh vien: ";
-//				gets(sv.ten);
-//				insert_order(first,sv);
-//				break;
-//			}
-//			case '9':{
-//				cout<<"Ban co chac khong(c/k):";
-//				c = getche();
-//				if(c=='c'||c=='C') clearlist(first);
-//				break;
-//			}
-//			
-//		}
-//	}while(chucnang != '0');
-//	clearlist(first);
-}
+//int main(){
+//	return 1;
+////	int vitri;
+////	char chucnang,c,maso[5],c_vitri[5];
+////	initialize(first);
+////	do{
+////		chucnang = menu();
+////		fflush(stdin);
+////		switch(chucnang){
+////			case '1':{
+////				create_list(first);
+////				break;
+////			}
+////			case '2':{
+////				printf("\nvi tri them(1,2,3, . . .):");
+////				gets(c_vitri);
+////				vitri=atoi(c_vitri);
+////				p = nodepointer(first,vitri-1);
+////				if(vitri<=0||p==NULL){
+////					printf("Vi tri khong hop le");
+////					getche();
+////				}else{
+////					printf("Ma so sinh vien: ");
+////					gets(maso);
+////					sv.maso = atoi(maso);
+////					printf("Ho sinh vien: ");
+////					gets(sv.ho);
+////					printf("Ten sinh vien: ");
+////					gets(sv.ten);
+////					if(vitri == 1) insert_first(first,sv);
+////					else insert_after(p,sv);
+////				}
+////				break;
+////			}
+////			case '3':{
+////				printf("Danh sach sinh vien: ");
+////				printf("\n STT MSSV		HOTEN");
+////				traverse(first);
+////				getche();
+////				break;
+////			}
+////			case '4':{
+////				printf("vi tri hieu chinh(1,2,...):");
+////				gets(c_vitri);
+////				vitri = atoi(c_vitri);
+////				p=nodepointer(first,vitri);
+////				if(p == NULL){
+////					printf("Vi tri khon phu hop");
+////					getche();
+////				}else{
+////					printf("\n STT:%d MSSV:%d HO:%s TEN:%s",vitri,p->info.maso,p->info.ho,p->info.ten);
+////					printf("\nMa sosv moi: ");
+////					gets(maso);
+////					sv.maso = atoi(maso);
+////					printf("Ho sv moi: ");
+////					gets(sv.ho);
+////					printf("ten sv moi: ");
+////					gets(sv.ten);
+////					p->info = sv;
+////				}
+////				break;
+////			}
+////			case '5':{
+////				printf("\nVi tri can xoa(1,2, ...)");
+////				gets(c_vitri);
+////				vitri = atoi(c_vitri);
+////				p = nodepointer(first,vitri-1);
+////				if(vitri <=0||p==NULL){
+////					printf("vi tri khong hop le");
+////					getche();
+////				}else{
+////					if(vitri ==1) delete_first(first);
+////					else delete_after(p);
+////				}
+////				break;
+////			}
+////			case '6':{
+////				cout<<"\n Ma so sinh vien can tim: ";
+////				gets(maso);
+////				sv.maso = atoi(maso);
+////				p=search_info(first,sv.maso);
+////				if(p ==NULL) printf("Khong co sinh vien co ma so %d trong danh sach",sv.maso);
+////				else{
+////					printf("Tim thay o vi tri %d trong danh sach",position(first,p));
+////					getche();
+////				}
+////				break;
+////			}
+////			case '7':{
+////				cout<<"ban cho chac khong ??";
+////				c = toupper(getche());
+////				if(c == 'C') selection(first);
+////				break;
+////			}
+////			case '8':{
+////				cout<<"Ban nho sap xep danh sach truowc. Nhan phim bat ky . .. ";
+////				getche();
+////				cout<<"ma so sinh vien: ";
+////				gets(maso);
+////				sv.maso = atoi(maso);
+////				cout<<"Ho sinh vien: ";
+////				gets(sv.ho);
+////				cout<<"ten sinh vien: ";
+////				gets(sv.ten);
+////				insert_order(first,sv);
+////				break;
+////			}
+////			case '9':{
+////				cout<<"Ban co chac khong(c/k):";
+////				c = getche();
+////				if(c=='c'||c=='C') clearlist(first);
+////				break;
+////			}
+////			
+////		}
+////	}while(chucnang != '0');
+////	clearlist(first);
+//}
