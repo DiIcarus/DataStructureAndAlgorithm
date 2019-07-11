@@ -1,0 +1,19 @@
+﻿  danhmucsach.cpp
+c:\users\admin\desktop\ctdl-gt\dathuvien\dathuvien\danhmucsach.h(185): warning C4129: 'C': unrecognized character escape sequence
+c:\users\admin\desktop\ctdl-gt\dathuvien\dathuvien\danhmucsach.h(137): warning C4477: 'printf_s' : format string '%8s' requires an argument of type 'char *', but variadic argument 2 has type 'std::string'
+c:\users\admin\desktop\ctdl-gt\dathuvien\dathuvien\danhmucsach.h(137): warning C4477: 'printf_s' : format string '%-10s' requires an argument of type 'char *', but variadic argument 4 has type 'std::string'
+  dausach.cpp
+c:\users\admin\desktop\ctdl-gt\dathuvien\dathuvien\danhmucsach.h(185): warning C4129: 'C': unrecognized character escape sequence
+c:\users\admin\desktop\ctdl-gt\dathuvien\dathuvien\danhmucsach.h(137): warning C4477: 'printf_s' : format string '%8s' requires an argument of type 'char *', but variadic argument 2 has type 'std::string'
+c:\users\admin\desktop\ctdl-gt\dathuvien\dathuvien\danhmucsach.h(137): warning C4477: 'printf_s' : format string '%-10s' requires an argument of type 'char *', but variadic argument 4 has type 'std::string'
+  main.cpp
+c:\users\admin\desktop\ctdl-gt\dathuvien\dathuvien\danhmucsach.h(185): warning C4129: 'C': unrecognized character escape sequence
+c:\users\admin\desktop\ctdl-gt\dathuvien\dathuvien\danhmucsach.h(137): warning C4477: 'printf_s' : format string '%8s' requires an argument of type 'char *', but variadic argument 2 has type 'std::string'
+c:\users\admin\desktop\ctdl-gt\dathuvien\dathuvien\danhmucsach.h(137): warning C4477: 'printf_s' : format string '%-10s' requires an argument of type 'char *', but variadic argument 4 has type 'std::string'
+  Generating Code...
+dausach.obj : error LNK2005: "char (* thucDonTrangThai)[50]" (?thucDonTrangThai@@3PAY0DC@DA) already defined in danhmucsach.obj
+docgia.obj : error LNK2005: "char (* thucDonTrangThai)[50]" (?thucDonTrangThai@@3PAY0DC@DA) already defined in danhmucsach.obj
+main.obj : error LNK2005: "char (* thucDonTrangThai)[50]" (?thucDonTrangThai@@3PAY0DC@DA) already defined in danhmucsach.obj
+menudong.obj : error LNK2005: "char (* thucDonTrangThai)[50]" (?thucDonTrangThai@@3PAY0DC@DA) already defined in danhmucsach.obj
+thucdon.obj : error LNK2005: "char (* thucDonTrangThai)[50]" (?thucDonTrangThai@@3PAY0DC@DA) already defined in danhmucsach.obj
+C:\Users\ADMIN\Desktop\CTDL-GT\DAThuVien\x64\Debug\DAThuVien.exe : fatal error LNK1169: one or more multiply defined symbols found
